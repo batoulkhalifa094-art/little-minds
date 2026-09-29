@@ -1,0 +1,365 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px; /* لتجنب تغطية الـ Navbar للقسم */
+}
+/*تجنب تسبب الازاحة الداخلية والخارجية بتغير حجم العناصر*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    
+    background-color: #cbe3e4;
+}
+button{
+    height: 35px;
+    width:80px ;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+button:hover{
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* ======= nav bar =========*/
+
+.nav{
+    width: 100%;
+    height: 75px;
+    background-color: lightblue;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    padding: 7px;
+    
+}
+
+.nav img{ 
+    width: auto;
+    height: 65px;
+    border-radius: 50%;
+    margin-left: 120px;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    float: right;
+    padding-top: 20px;
+    margin-right: 150px; 
+}
+
+.nav ul li{
+    font-size: 22px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* ======= hero section =========*/
+
+.hero{
+    margin: 75px 0px 15px;
+    background-image: url(../images/LITTLE-MINDS-Home_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 75px);
+    position: relative;
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%,-50%);
+    padding: 10px;
+    text-align: center;
+    font-size:x-large;
+    color: rgb(33, 34, 87);
+}
+
+
+.hero-content button{
+    color:white ;
+    width:175px ;
+    background-color: rgb(119, 175, 157);
+    margin-top: 10px;
+}
+
+.hero-content button:hover{
+    color: #201e1e;
+    background-color: rgb(247, 247, 224);
+}
+
+/* ======= about-us section =========*/
+
+.about-us{
+    font-size: larger;
+    color: rgb(76, 77, 127);
+    background-color: rgb(247, 247, 224);
+    height: 200px;
+    overflow: auto;
+    padding-top:20px ;
+    border-radius: 20px
+}
+.about-us div{
+    float: left;
+    width: 45%;
+    margin: 0 30px;
+    padding: 0 20px;
+}
+.about-us ul{
+    list-style: none;
+
+}
+.about-us ul li{
+    margin: 0 0 22px 0;
+}
+.about-us ul li h4{
+    display: inline;
+}
+.about-content{
+    border-right: 3px solid #a5dadd;
+}
+
+
+
+
+/* الأب الرئيسي لكل قسم */
+.Subjects, 
+.Explorer-Boxes, 
+.Discounts {
+    overflow: auto;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* التنسيق المشترك لكل البطاقات في الأقسام الثلاثة */
+.Subject-box, 
+.Explorer-box, 
+.Discounts-box {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border: 3px solid #201e1e;
+    position:relative;
+    z-index: 5;
+}
+
+/*التنسيق المشترك للطبقة الشفافة فوق العنصر*/
+.Subject-box::after, 
+.Explorer-box::after, 
+.Discounts-box::after {
+     content: "";
+    position: absolute;
+
+    background-color: rgba(0, 0, 0, 0.295);
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 0%;
+    height: 0%;
+    transition: .5s;
+}
+
+
+
+.Subject-box:hover::after, 
+.Explorer-box:hover::after, 
+.Discounts-box:hover::after{
+    width: 100%;
+    height: 100%;
+}
+
+.Explorer-box::after{
+    background-color: rgba(203, 227, 228, 0.392);
+}
+/* إلغاء الحافة اليمنى لآخر بطاقة  */
+.last-box {
+    margin-right: 0% ; 
+}
+
+/* التنسيق المشترك للنصوص داخل البطاقات */
+.Subject-text, 
+.Explorer-box-text, 
+.Discounts-text {
+    padding: 15px;
+    text-align: center;
+}
+
+/* الدوائر المشتركة في قسم صناديق الاستكشاف وقسم الخصومات */
+.Explorer-box-text div, 
+.Discounts-text div {
+    margin: 10px auto;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    font-size: large;
+}
+
+
+
+
+/*------- قسم المواد Subjects -------*/
+.Subject-image img {
+    width: 100%;
+    height: 220px;
+}
+
+.Subject-box:hover::after{
+    background-color: rgb(247, 247, 224);
+}
+
+.Subject-box:hover h3 {
+    color: rgb(123, 58, 188); 
+    transition: .5s;
+}
+
+/*------- قسم الاستكشاف Explorer-Boxes -------*/
+.Explorer-Boxes {
+    border-radius: 20px; 
+    background-color: rgb(247, 247, 224);
+}
+
+.Explorer-Boxes h2, 
+.Explorer-Boxes h3 {
+    color: rgb(73, 126, 93);
+}
+
+.title-line {
+    width: 80px;
+    height: 4px;
+    background-color: black;
+    margin: 40px auto;
+    border-radius: 2px;
+}
+
+.Explorer-box {
+    height: 300px; 
+}
+
+/* أزرار قسم الاستكشاف */
+.Explorer-box-text button {
+    position: relative; 
+    z-index: 5; 
+    color: rgb(129, 191, 152);
+    background-color: rgb(247, 247, 224);
+    border: 2px solid rgb(129, 191, 152);
+}
+
+.Explorer-box-text button:hover {
+    color: rgb(247, 247, 224);
+    background-color: rgb(129, 191, 152);
+}
+
+.Explorer-box-text div {
+    border: 2px solid rgb(129, 191, 152);
+    padding-top: 20px;
+}
+
+
+
+/*------- قسم الخصومات Discounts -------*/
+.Discounts {
+    border-radius: 20px; 
+    background-color: #cbe3e4;
+}
+
+.Discounts h2, 
+.Discounts h3 {
+    color: rgb(87, 59, 113);
+}
+
+.Discounts-box {
+    height: 270px; 
+}
+
+.Discounts-box:hover .Discounts-text div{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.Discounts-text {
+    line-height: 25px;
+}
+
+.Discounts-text div {
+    background-color: #cbe3e4;
+    border: 2px solid rgb(87, 59, 113);
+    padding-top: 25px;
+}
+
+.Discounts-box:hover::after{
+     width: 50%;
+}
+.Discounts-box::after{
+    left: auto;
+     width: 50%;
+    background-color: rgba(103, 136, 182, 0.316);
+}
+
+.Discounts-box::before {
+     content: "";
+    position: absolute;
+
+    background-color: rgba(103, 136, 182, 0.316);
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 50%;
+    height: 0%;
+    transition: .5s;
+}
+.Discounts-box:hover::before{
+    width: 50%;
+    height: 100%;
+}
+
+
+/* ======= contact-us section =========*/
+.contact-us{
+    background-color: rgb(103, 136, 182);
+    height: 250px;
+    position: relative;
+}
+.contact-us div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.contact-us div img{
+    margin-bottom: 10px;
+    height: 150px;
+    width: 300px;
+}
+.contact-us div ul{
+    list-style: none;
+    display: flex;
+}
+.contact-us div ul li{
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.contact-us div ul li:hover{
+    cursor: pointer;
+    transform: translate(0,-5px);
+    transition: .5s;
+}

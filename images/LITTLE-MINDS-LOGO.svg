@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Glows -->
+    <radialGradient id="cosmosGlow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="mindLight" cx="50%" cy="43%" r="35%">
+      <stop offset="0%" stop-color="#FEF08A" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#F59E0B" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Rich Element Gradients -->
+    <linearGradient id="headStroke" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="50%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+
+    <linearGradient id="spaceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+
+    <linearGradient id="natureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="dinoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C" />
+      <stop offset="100%" stop-color="#EA580C" />
+    </linearGradient>
+
+    <linearGradient id="cultureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Filters for Depth & Soft Magic -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0284C7" flood-opacity="0.18" />
+    </filter>
+
+    <filter id="elementShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0F172A" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background Cosmic Glow Behind Head -->
+  <circle cx="290" cy="175" r="175" fill="url(#cosmosGlow)" />
+
+  <!-- ==================== ILLUSTRATION: THE EXPLORING MIND ==================== -->
+  <g filter="url(#softGlow)">
+
+    <!-- 1. ORBITAL PATHS -->
+    <g opacity="0.4" stroke-linecap="round">
+      <ellipse cx="290" cy="170" rx="175" ry="58" fill="none" stroke="#0284C7" stroke-width="2" stroke-dasharray="6 8" transform="rotate(-12 290 170)" />
+      <ellipse cx="290" cy="170" rx="155" ry="48" fill="none" stroke="#6366F1" stroke-width="1.5" opacity="0.7" transform="rotate(24 290 170)" />
+    </g>
+
+    <!-- 2. CENTRAL HEAD SILHOUETTE -->
+    <path d="M 225 288 
+             C 225 247, 242 224, 262 212 
+             C 252 201, 246 185, 246 167 
+             C 246 136, 266 110, 294 110 
+             C 322 110, 342 136, 342 167 
+             C 342 185, 336 201, 326 212 
+             C 346 224, 363 247, 363 288" 
+          fill="none" 
+          stroke="url(#headStroke)" 
+          stroke-width="7.5" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Radiant Light of Curiosity at the Core -->
+    <circle cx="294" cy="167" r="45" fill="url(#mindLight)" />
+
+    <!-- 3. CREATIVE WORLDS BURSTING FROM THE MIND -->
+
+    <!-- A. SPACE & STARS (Top Center) -->
+    <g transform="translate(294, 46)" filter="url(#elementShadow)">
+      <!-- Saturn Planet -->
+      <ellipse cx="0" cy="0" rx="14" ry="14" fill="url(#spaceGrad)" />
+      <ellipse cx="0" cy="0" rx="22" ry="6" fill="none" stroke="#A78BFA" stroke-width="2.5" transform="rotate(-18)" />
+      <!-- Flying Rocket -->
+      <g transform="translate(25, -10) rotate(25)">
+        <path d="M 0 -12 C 5 -6, 5 6, 0 12 C -5 6, -5 -6, 0 -12 Z" fill="#6366F1" />
+        <circle cx="0" cy="-2" r="2.5" fill="#38BDF8" />
+        <path d="M -2 11 Q 0 17, 2 11 Z" fill="#F59E0B" />
+      </g>
+    </g>
+
+    <!-- B. OCEAN & LIFE: Blue Whale (Top Left) -->
+    <g transform="translate(152, 84)" filter="url(#elementShadow)">
+      <!-- Whale Body -->
+      <path d="M -5 18 C 10 -2, 38 -2, 45 14 C 32 20, 15 22, -5 18 Z" fill="url(#oceanGrad)" />
+      <!-- Whale Tail -->
+      <path d="M -4 18 C -12 12, -15 22, -20 16 C -16 24, -8 24, -4 18 Z" fill="#0284C7" />
+      <!-- Water Spout -->
+      <path d="M 22 2 Q 20 -8, 14 -10 M 22 2 Q 26 -8, 32 -9" fill="none" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" />
+    </g>
+
+    <!-- C. NATURE & EARTH: Spreading Tree / Leaves (Top Right) -->
+    <g transform="translate(416, 84)" filter="url(#elementShadow)">
+      <path d="M -10 25 Q 0 10, 12 -2 C 22 8, 25 22, 12 28 Z" fill="url(#natureGrad)" />
+      <path d="M 2 12 Q 14 0, 24 -10 C 32 0, 30 14, 18 18 Z" fill="#34D399" />
+      <!-- Small Flying Butterfly -->
+      <path d="M -8 -4 Q -3 -12, 2 -4 Q 7 -12, 12 -4 Q 2 2, -8 -4 Z" fill="#FBBF24" />
+    </g>
+
+    <!-- D. PREHISTORY: Baby T-Rex (Middle Right) -->
+    <g transform="translate(430, 172)" filter="url(#elementShadow)">
+      <path d="M -10 20 C -10 0, 8 -8, 20 -2 C 26 2, 24 10, 16 12 C 12 13, 8 18, 10 25 Z" fill="url(#dinoGrad)" />
+      <circle cx="8" cy="2" r="2.5" fill="#FFFFFF" />
+      <circle cx="9" cy="2" r="1.2" fill="#0F172A" />
+      <path d="M -8 12 L -13 8 L -6 6 L -10 2 L -3 2 Z" fill="#EA580C" />
+    </g>
+
+    <!-- E. CULTURES & HUMANITY: Hot Air Balloon (Middle Left) -->
+    <g transform="translate(138, 172)" filter="url(#elementShadow)">
+      <path d="M 0 -18 C -16 -18, -18 2, 0 14 C 18 2, 16 -18, 0 -18 Z" fill="url(#cultureGrad)" />
+      <path d="M -6 -16 C -2 -4, -2 8, 0 14 C 2 8, 2 -4, 6 -16 Z" fill="#F59E0B" />
+      <rect x="-4" y="19" width="8" height="6" rx="1" fill="#78350F" />
+      <line x1="-2" y1="14" x2="-3" y2="19" stroke="#78350F" stroke-width="1.2" />
+      <line x1="2" y1="14" x2="3" y2="19" stroke="#78350F" stroke-width="1.2" />
+    </g>
+
+    <!-- F. MAGICAL SPARKLES -->
+    <g fill="#F59E0B">
+      <path d="M 294 94 L 297 101 L 304 104 L 297 107 L 294 114 L 291 107 L 284 104 L 291 101 Z" fill="#FBBF24" />
+      <path d="M 228 121 L 230 125 L 234 127 L 230 129 L 228 133 L 226 129 L 222 127 L 226 125 Z" fill="#38BDF8" />
+      <path d="M 360 124 L 362 128 L 366 130 L 362 132 L 360 136 L 358 132 L 354 130 L 358 128 Z" fill="#A78BFA" />
+      <circle cx="255" cy="76" r="3" fill="#38BDF8" />
+      <circle cx="335" cy="78" r="3.5" fill="#34D399" />
+      <circle cx="190" cy="141" r="2.5" fill="#FB923C" />
+      <circle cx="390" cy="136" r="3" fill="#FBBF24" />
+    </g>
+
+  </g>
+
+  <!-- ==================== BRAND NAME ONLY ==================== -->
+  <g text-anchor="middle">
+    <!-- BRAND NAME: LITTLE MINDS -->
+    <text x="290" y="352" 
+          font-family="System-UI, -apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', 'Segoe UI', sans-serif" 
+          font-size="42" 
+          font-weight="900" 
+          letter-spacing="4" 
+          fill="#0F172A">
+      LITTLE <tspan fill="#0EA5E9">MINDS</tspan>
+    </text>
+  </g>
+
+</svg>
